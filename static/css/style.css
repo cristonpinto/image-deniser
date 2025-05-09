@@ -1,0 +1,285 @@
+:root {
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --success-color: #10b981;
+    --info-color: #0ea5e9;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --light-bg: #f9fafb;
+    --dark-bg: #1f2937;
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --glass-effect: blur(10px);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --transition: all 0.3s ease;
+    --border-radius: 12px;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #f0f4f8 0%, #d7e3fc 100%);
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    color: #334155;
+    min-height: 100vh;
+  }
+  
+  /* Modern Card Styles */
+  .card {
+    background: var(--card-bg);
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    backdrop-filter: var(--glass-effect);
+    transition: var(--transition);
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  
+  .card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+  }
+  
+  .card-header {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: var(--glass-effect);
+    font-weight: 600;
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .card-body {
+    padding: 24px;
+  }
+  
+  /* Button Styles */
+  .btn {
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-weight: 500;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .btn-primary {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  
+  .btn-primary:hover, .btn-primary:focus {
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
+  }
+  
+  .btn-success {
+    background: var(--success-color);
+    border-color: var(--success-color);
+  }
+  
+  .btn-outline-secondary:hover {
+    background-color: #e2e8f0;
+  }
+  
+  /* Form Controls */
+  .form-control, .form-select {
+    border-radius: 8px;
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: var(--transition);
+  }
+  
+  .form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+  }
+  
+  .form-range::-webkit-slider-thumb {
+    background: var(--primary-color);
+  }
+  
+  .form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  
+  /* Image Containers */
+  .result-image {
+    max-height: 250px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+  }
+  
+  .result-image:hover {
+    transform: scale(1.02);
+  }
+  
+  .upload-preview img {
+    max-height: 220px;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  
+  #uploadPreview {
+    border: 2px dashed #cbd5e1;
+    border-radius: 10px;
+    padding: 15px;
+    transition: var(--transition);
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  
+  #uploadPreview.highlight {
+    border-color: var(--primary-color);
+    background-color: rgba(99, 102, 241, 0.1);
+  }
+  
+  /* Status Indicator */
+  .status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  .status-success {
+    background-color: var(--success-color);
+  }
+  
+  .status-processing {
+    background-color: var(--warning-color);
+    animation: blink 1.2s infinite;
+  }
+  
+  .status-error {
+    background-color: var(--danger-color);
+  }
+  
+  @keyframes blink {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+  }
+  
+  /* Toasts and Modals */
+  .toast {
+    border-radius: 10px;
+    box-shadow: var(--shadow-md);
+    backdrop-filter: var(--glass-effect);
+  }
+  
+  .toast-header {
+    backdrop-filter: var(--glass-effect);
+  }
+  
+  .modal-content {
+    border-radius: 16px;
+    border: none;
+    box-shadow: var(--shadow-lg);
+    backdrop-filter: var(--glass-effect);
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  .modal-body {
+    padding: 30px;
+  }
+  
+  /* Loading Spinner */
+  .spinner-border {
+    border-right-color: transparent;
+  }
+  
+  /* Chart Styles */
+  #metricsChart {
+    width: 100%;
+    height: 220px;
+  }
+  
+  /* File Input Styling */
+  .custom-file-input {
+    cursor: pointer;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .card-body {
+      padding: 16px;
+    }
+    
+    .upload-preview img {
+      max-height: 180px;
+    }
+    
+    .result-image {
+      max-height: 200px;
+    }
+  }
+  
+  /* Nice animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  #processingSection, #resultsSection {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  /* Glass Effect for Sections */
+  .bg-glass {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: var(--glass-effect);
+  }
+  
+  /* Enhance form feedback */
+  .form-text {
+    color: #64748b;
+    font-size: 0.85rem;
+    margin-top: 4px;
+  }
+  
+  /* Better alerts */
+  .alert {
+    border-radius: 8px;
+    border: none;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .alert-info {
+    background-color: rgba(14, 165, 233, 0.15);
+    color: #0369a1;
+  }
+  
+  /* Table styling */
+  .table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .table th, .table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Progress indication */
+  .progress {
+    height: 8px;
+    border-radius: 4px;
+    background-color: #e2e8f0;
+    margin-bottom: 12px;
+  }
+  
+  .progress-bar {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+  }

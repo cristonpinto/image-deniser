@@ -1,0 +1,51 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+denoiser_env/
+denoiser_env_py311/
+
+# Model files
+*.h5
+*.keras
+
+# Flask cache and instance folders
+instance/
+*.db
+*.sqlite3
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Log and temporary files
+*.log
+*.tmp
+
+# Uploaded and result images (can be regenerated)
+static/uploads/
+static/results/
+
+# Environment/config files
+.env
+config.py
+
+# IDE/editor-specific files
+.vscode/
+*.code-workspace
+
+# Python dependency management
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Windows batch files (optional)
+*.bat
+
+# TensorBoard logs
+logs/
+
+# Pytest cache
+.pytest_cache/

@@ -1,0 +1,10 @@
+# filepath: f:\KDU\port\py\requirements.txt
+Flask==2.3.3
+tensorflow==2.18.0
+numpy>=1.24.3
+opencv-python>=4.8.0
+pillow>=10.0.0
+scikit-image>=0.21.0
+werkzeug>=2.3.7
+gunicorn>=21.2.0  # For deployment
+matplotlib>=3.7.2  # For any visualization needs
